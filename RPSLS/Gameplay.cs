@@ -7,33 +7,32 @@ namespace RPSLS
     class Gameplay
     {
         //member variables (Has a)
-        string player;
-        string player1;
-        string player2;
+        public List<string> gestures;
+        Player player1;
+        Player player2;
 
         //constructor
         public Gameplay()
         {
-            player = player1;
-            player = player2;
+
         }
 
         //member methods (Can do)
         public int GetNumberOfPlayers()
         {
             Console.WriteLine("How many players?");
-            int numberOfPlayers = int.Parse(Console.ReadLine);
+            int numberOfPlayers = int.Parse(Console.ReadLine());
             return numberOfPlayers;
         }
 
-        public void SetupPlayers(int numberOfPlayers)
+        public void SetUpPlayers(int numberOfPlayers)
         {
-            if(numberOfPlayers == 2)
+            if (numberOfPlayers == 2)
             {
                 player1 = new Human();
                 player2 = new Human();
             }
-            else if(numberOfPlayers == 1)
+            else if (numberOfPlayers == 1)
             {
                 player1 = new Human();
                 player2 = new Computer();
@@ -45,5 +44,6 @@ namespace RPSLS
             player1.MakeChoice();
             player2.MakeChoice();
         }
+
     }
 }

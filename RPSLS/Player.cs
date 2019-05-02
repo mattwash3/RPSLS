@@ -7,9 +7,9 @@ namespace RPSLS
     public abstract class Player
     {
         //member variables (Has a)
-        string name;
-        string choice;
-        int score;
+        public string name;
+        public string choice;
+        public int score;
 
         //constructor
         public Player()
@@ -18,9 +18,13 @@ namespace RPSLS
         }
 
         //member methods (Can do)
-        public abstract void MakeChoice()
+        public abstract void MakeChoice();
 
-        public void 
+        public void SetUpPlayer()
+        {
+            Console.WriteLine("Enter your player name");
+            name = Console.ReadLine();
+        }
 
     }
 }
