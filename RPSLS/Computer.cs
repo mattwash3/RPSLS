@@ -7,17 +7,26 @@ namespace RPSLS
     public class Computer : Player
     {
         //member variables (Has a)
+        Random random = new Random();
 
 
         //constructor
         public Computer()
         {
+
         }
 
         //member methods (Can do)
-        public void PickGesture()
+        public int RandomNumber()
         {
-            int randomNumber = 0;
+            int i;
+            i = random.Next(0, 4);
+            return i;
+        }
+
+        public void ChooseGesture()
+        {
+            int randomNumber = RandomNumber();
             // how to generate random number
             switch (randomNumber)
             {
@@ -42,12 +51,12 @@ namespace RPSLS
                     choice = "spock";
                     break;
             }
-            
+
         }
 
         public override void MakeChoice()
         {
-            Console.WriteLine();
+            ChooseGesture();
         }
 
     }

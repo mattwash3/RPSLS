@@ -7,15 +7,8 @@ namespace RPSLS
         static void Main(string[] args)
         {
             Gameplay game = new Gameplay();
-            // game.RunGame();
-            Human player1 = new Human();
-            Human player2 = new Human();
-            Computer player2 = new Computer();
-
+            game.RunGame();
+            Console.ReadLine();
         }
-    }
-
-    internal class List<T>
-    {
     }
 }

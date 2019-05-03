@@ -7,37 +7,42 @@ namespace RPSLS
     public class Human : Player
     {
         //member variables (Has a)
+        //inherited from player
+
 
         //constructor
         public Human()
         {
-
+            Console.WriteLine("Enter player name");
+            name = Console.ReadLine();
         }
+
+
 
         //member methods (Can do)
         public void PlayerName()
         {
-            Console.WriteLine("Enter player name");
-            string name = Console.ReadLine();
+           
         }
 
-        public void ChooseMove()
+        public void ChooseGesture()
         {
-            Console.WriteLine("Choose your gesture");
+            Console.WriteLine("choose your gesture");
             string gesture = Console.ReadLine();
         }
 
         public void PlayerScore()
         {
-            if(choice)
-            {
+            //if()
+            //{
 
-            }
+            //}
         }
 
         public override void MakeChoice()
         {
-            Console.WriteLine();
+            Console.WriteLine("Pick one of these options: rock, paper, scissors, lizard, spock");
+            choice = Console.ReadLine();
         }
     }
 }
