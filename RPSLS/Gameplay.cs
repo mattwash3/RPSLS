@@ -4,21 +4,33 @@ using System.Text;
 
 namespace RPSLS
 {
-    class Gameplay
+    public class Gameplay
     {
         //member variables (Has a)
-        public List<string> gestures;
+        List<Gameplay> choice;
         Player player1;
         Player player2;
 
         //constructor
         public Gameplay()
         {
-
+            choice = new List<Gameplay>();
         }
 
         //member methods (Can do)
-        public int GetNumberOfPlayers()
+        public void GameStart()
+        {
+            Console.WriteLine();
+            Console.ReadLine();
+        }
+
+        public void DisplayIntroAndRules()
+        {
+            Console.WriteLine();
+            Console.ReadLine();
+        }
+
+        public int PickNumberOfPlayers()
         {
             Console.WriteLine("How many players?");
             int numberOfPlayers = int.Parse(Console.ReadLine());
@@ -27,16 +39,22 @@ namespace RPSLS
 
         public void SetUpPlayers(int numberOfPlayers)
         {
-            if (numberOfPlayers == 2)
-            {
-                player1 = new Human();
-                player2 = new Human();
-            }
-            else if (numberOfPlayers == 1)
+            if (numberOfPlayers == 1)
             {
                 player1 = new Human();
                 player2 = new Computer();
             }
+            else if (numberOfPlayers == 2)
+            {
+                player1 = new Human();
+                player2 = new Human();
+            }
+        }
+
+        public void PlayGame()
+        {
+            Console.WriteLine();
+            Console.ReadLine();
         }
 
         public void ChooseGestures()
@@ -45,5 +63,19 @@ namespace RPSLS
             player2.MakeChoice();
         }
 
+        public void ReplayQuit()
+        {
+            Console.WriteLine();
+            Console.ReadLine();
+        }
+
+        public void RPSLP()
+        {
+            GameStart();
+            DisplayIntroAndRules();
+            PickNumberOfPlayers();
+            PlayGame();
+            ReplayQuit();
+        }
     }
 }

@@ -11,9 +11,7 @@ namespace RPSLS
         //constructor
         public Human()
         {
-            name = null;
-            choice = null;
-            score = 0;
+
         }
 
         //member methods (Can do)
@@ -31,10 +29,15 @@ namespace RPSLS
 
         public void PlayerScore()
         {
-            if(gesture)
+            if(choice)
             {
 
             }
+        }
+
+        public override void MakeChoice()
+        {
+            Console.WriteLine();
         }
     }
 }

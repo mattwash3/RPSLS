@@ -12,9 +12,6 @@ namespace RPSLS
         //constructor
         public Computer()
         {
-            name = null;
-            choice = null;
-            score = 0;
         }
 
         //member methods (Can do)
@@ -30,19 +27,27 @@ namespace RPSLS
                     break;
                 case 2:
                     Console.WriteLine("paper");
-
+                    choice = "paper";
                     break;
                 case 3:
                     Console.WriteLine("scissors");
+                    choice = "scissors";
                     break;
                 case 4:
                     Console.WriteLine("lizard");
+                    choice = "lizard";
                     break;
                 case 5:
                     Console.WriteLine("spock");
+                    choice = "spock";
                     break;
             }
             
+        }
+
+        public override void MakeChoice()
+        {
+            Console.WriteLine();
         }
 
     }
