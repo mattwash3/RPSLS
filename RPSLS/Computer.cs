@@ -19,15 +19,15 @@ namespace RPSLS
         //member methods (Can do)
         public int RandomNumber()
         {
-            int i;
-            i = random.Next(0, 4);
-            return i;
+            int number;
+            number = random.Next(0, 4);
+            return number;
         }
 
         public void ChooseGesture()
         {
             int randomNumber = RandomNumber();
-            // how to generate random number
+            //generate random number
             switch (randomNumber)
             {
                 case 1:
@@ -51,7 +51,6 @@ namespace RPSLS
                     choice = "spock";
                     break;
             }
-
         }
 
         public override void MakeChoice()

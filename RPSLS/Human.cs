@@ -13,30 +13,17 @@ namespace RPSLS
         //constructor
         public Human()
         {
-            Console.WriteLine("Enter player name");
-            name = Console.ReadLine();
+
         }
 
 
 
         //member methods (Can do)
-        public void PlayerName()
-        {
-           
-        }
 
         public void ChooseGesture()
         {
             Console.WriteLine("choose your gesture");
             string gesture = Console.ReadLine();
-        }
-
-        public void PlayerScore()
-        {
-            //if()
-            //{
-
-            //}
         }
 
         public override void MakeChoice()

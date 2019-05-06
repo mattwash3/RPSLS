@@ -22,36 +22,15 @@ namespace RPSLS
             gesture.Add("scissors");
             gesture.Add("lizard");
             gesture.Add("spock");
-
         }
 
         //member methods (Can do)
         public abstract void MakeChoice();
-
-        public void SetUpPlayer()
-        {
-            Console.WriteLine("Enter your player name");
-            name = Console.ReadLine();
-        }
-
-        public void GetPlayerNames()
-        {
-            Console.WriteLine("Player 1");
-            Console.WriteLine("Player 2");
-            Console.ReadLine();
-        }
 
         public void ChooseGesture()
         {
             Console.WriteLine();
             Console.ReadLine();
         }
-
-        public void DisplayResults()
-        {
-            Console.WriteLine();
-            Console.ReadLine();
-        }
-
     }
 }
